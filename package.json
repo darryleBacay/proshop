@@ -1,0 +1,15 @@
+{
+  "name": "proshop",
+  "version": "1.0.0",
+  "description": "A MERN tutorial",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server/server.js"
+  },
+  "author": "Darryle Bacay",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
