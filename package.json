@@ -1,19 +1,22 @@
 {
-  "name": "proshop",
-  "version": "1.0.0",
-  "description": "A MERN tutorial",
-  "type": "module",
-  "main": "server.js",
-  "scripts": {
-    "start": "node server/server.js"
-  },
-  "author": "Darryle Bacay",
-  "license": "MIT",
-  "dependencies": {
-    "express": "^4.18.2"
-  },
-  "devDependencies": {
-    "concurrently": "^8.2.0",
-    "nodemon": "^3.0.1"
-  }
+	"name": "proshop",
+	"version": "1.0.0",
+	"description": "A MERN tutorial",
+	"type": "module",
+	"main": "server.js",
+	"scripts": {
+		"start": "node server/server.js",
+		"server": "nodemon server/server.js",
+		"client": "npm start --prefix client",
+		"dev": "concurrently \"npm run server\" \"npm run client\""
+	},
+	"author": "Darryle Bacay",
+	"license": "MIT",
+	"dependencies": {
+		"express": "^4.18.2"
+	},
+	"devDependencies": {
+		"concurrently": "^8.2.0",
+		"nodemon": "^3.0.1"
+	}
 }
