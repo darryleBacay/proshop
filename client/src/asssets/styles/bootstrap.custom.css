@@ -9042,6 +9042,11 @@ fieldset:disabled .btn {
   border-radius: var(--bs-border-radius) !important;
 }
 
+.rounded:hover {
+  transition: .7s;
+  background: #f0b36a;
+}
+
 .rounded-0 {
   border-radius: 0 !important;
 }
