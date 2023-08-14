@@ -2,6 +2,8 @@ import React from "react";
 import { Row, Col, Spinner } from "react-bootstrap";
 import Product from "../components/Product";
 import { useGetProductsQuery } from "../slices/productSlice";
+import Loader from "../components/Loader";
+import Message from "../components/Message";
 
 const HomeScreen = () => {
 	const { data: products, isLoading, error } = useGetProductsQuery();
@@ -9,9 +11,11 @@ const HomeScreen = () => {
 	return (
 		<React.Fragment>
 			{isLoading ? (
-				<Spinner />
+				<Loader />
 			) : error ? (
-				<div>{error?.data?.message || error?.error}</div>
+				<Message variant="danger">
+					{error?.data?.message || error?.error}
+				</Message>
 			) : (
 				<React.Fragment>
 					<h1>Latest Products</h1>
